@@ -30,7 +30,7 @@ public class HelloController {
 
         Button btn = (Button) event.getSource();
 
-        if (!isGame || btn.getText() != "") return;
+        if (!isGame || !btn.getText().isEmpty()) return;
 
         int rowIndex = GridPane.getRowIndex(btn) == null ? 0 : GridPane.getRowIndex(btn);
         int columnIndex = GridPane.getColumnIndex(btn) == null ? 0 : GridPane.getColumnIndex(btn);
